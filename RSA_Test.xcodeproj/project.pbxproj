@@ -14,6 +14,11 @@
 		03043A691BA0101E001847B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03043A681BA0101E001847B2 /* Images.xcassets */; };
 		03043A6C1BA0101E001847B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03043A6A1BA0101E001847B2 /* LaunchScreen.xib */; };
 		03043A781BA0101E001847B2 /* RSA_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03043A771BA0101E001847B2 /* RSA_TestTests.m */; };
+		03043A821BA01036001847B2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03043A811BA01036001847B2 /* Security.framework */; };
+		03043A851BA02ABC001847B2 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 03043A831BA02ABC001847B2 /* private_key.p12 */; };
+		03043A861BA02ABC001847B2 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 03043A841BA02ABC001847B2 /* public_key.der */; };
+		03043A891BA02ADE001847B2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03043A881BA02ADE001847B2 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		03043A8C1BA02B02001847B2 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 03043A8B1BA02B02001847B2 /* RSAEncryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,13 @@
 		03043A711BA0101E001847B2 /* RSA_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSA_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03043A761BA0101E001847B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03043A771BA0101E001847B2 /* RSA_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSA_TestTests.m; sourceTree = "<group>"; };
+		03043A811BA01036001847B2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		03043A831BA02ABC001847B2 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		03043A841BA02ABC001847B2 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		03043A871BA02ADE001847B2 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		03043A881BA02ADE001847B2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		03043A8A1BA02B02001847B2 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		03043A8B1BA02B02001847B2 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03043A821BA01036001847B2 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 		03043A4F1BA0101E001847B2 = {
 			isa = PBXGroup;
 			children = (
+				03043A811BA01036001847B2 /* Security.framework */,
 				03043A5A1BA0101E001847B2 /* RSA_Test */,
 				03043A741BA0101E001847B2 /* RSA_TestTests */,
 				03043A591BA0101E001847B2 /* Products */,
@@ -81,6 +95,10 @@
 		03043A5A1BA0101E001847B2 /* RSA_Test */ = {
 			isa = PBXGroup;
 			children = (
+				03043A871BA02ADE001847B2 /* NSData+Base64.h */,
+				03043A881BA02ADE001847B2 /* NSData+Base64.m */,
+				03043A831BA02ABC001847B2 /* private_key.p12 */,
+				03043A841BA02ABC001847B2 /* public_key.der */,
 				03043A5F1BA0101E001847B2 /* AppDelegate.h */,
 				03043A601BA0101E001847B2 /* AppDelegate.m */,
 				03043A621BA0101E001847B2 /* ViewController.h */,
@@ -89,6 +107,8 @@
 				03043A681BA0101E001847B2 /* Images.xcassets */,
 				03043A6A1BA0101E001847B2 /* LaunchScreen.xib */,
 				03043A5B1BA0101E001847B2 /* Supporting Files */,
+				03043A8A1BA02B02001847B2 /* RSAEncryptor.h */,
+				03043A8B1BA02B02001847B2 /* RSAEncryptor.m */,
 			);
 			path = RSA_Test;
 			sourceTree = "<group>";
@@ -202,6 +222,8 @@
 				03043A671BA0101E001847B2 /* Main.storyboard in Resources */,
 				03043A6C1BA0101E001847B2 /* LaunchScreen.xib in Resources */,
 				03043A691BA0101E001847B2 /* Images.xcassets in Resources */,
+				03043A851BA02ABC001847B2 /* private_key.p12 in Resources */,
+				03043A861BA02ABC001847B2 /* public_key.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03043A641BA0101E001847B2 /* ViewController.m in Sources */,
+				03043A891BA02ADE001847B2 /* NSData+Base64.m in Sources */,
 				03043A611BA0101E001847B2 /* AppDelegate.m in Sources */,
 				03043A5E1BA0101E001847B2 /* main.m in Sources */,
+				03043A8C1BA02B02001847B2 /* RSAEncryptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
